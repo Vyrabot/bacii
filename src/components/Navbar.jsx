@@ -6,11 +6,11 @@ function Navbar() {
     <header className="w-full sticky top-0 h-[80px] bg-Primery">
       <nav className="flex justify-between items-center h-full">
         <div>
-          <h2 className="text-accent font-semibold text-2xl md:text-4xl">
+          <h2 className="text-accent font-semibold text-[1.3rem] md:text-2xl lg:text-4xl">
             គណនាពិន្ទុបាក់ឌុប
           </h2>
         </div>
-        <div className="*:text-xl flex md:*:w-[120px] *:h-[30px] md:*:h-[40px] *:bg-bg2 *:rounded-md *:text-bg">
+        <div className="text-sm md:text-md lg*:text-xl flex md:*:w-[120px] h-[25px] md:*:h-[30px] :*lg:h-[40px] *:bg-bg2 *:rounded-md *:text-bg">
           <button className="mr-2">
             <Link to="/" className="p-3">
               វិទ្យាសាស្រ្ដ

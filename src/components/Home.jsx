@@ -48,17 +48,6 @@ function Home() {
     });
   };
   function handleOpen() {
-    if (
-      scores[0] == 0 ||
-      scores[1] == 0 ||
-      scores[2] == 0 ||
-      scores[3] == 0 ||
-      scores[4] == 0 ||
-      scores[5] == 0 ||
-      scores[6]
-    ) {
-      alert("សូមធ្វើការបញ្ចូលពិន្ទុរបស់អ្នក​ឪ្យបានត្រឹមត្រូវ!");
-    }
     scores.map((el) => {
       if (el == 0) {
         setOpen(false);
@@ -66,6 +55,17 @@ function Home() {
         setOpen(true);
       }
     });
+    if (
+      adjustedScores[0] == 0 ||
+      adjustedScores[1] == 0 ||
+      adjustedScores[2] == 0 ||
+      adjustedScores[3] == 0 ||
+      adjustedScores[4] == 0 ||
+      adjustedScores[5] == 0 ||
+      scores[6] == 0
+    ) {
+      alert("សូមធ្វើការបញ្ចូលពិន្ទុរបស់អ្នក​ឪ្យបានត្រឹមត្រូវ!");
+    }
   }
   const getBackgroundColor = (index, score) => {
     if (index === 0 || index === 2 || index === 3 || index === 4) {
@@ -84,7 +84,15 @@ function Home() {
       return "bg-green-500";
     }
   };
-
+  const getPercentage = (totalScore, index) => {
+    if ([0, 2, 3, 4].includes(index)) {
+      return (totalScore * 100) / 75;
+    } else if ([1].includes(index)) {
+      return (totalScore * 100) / 150;
+    } else {
+      return (totalScore * 100) / 50;
+    }
+  };
   return (
     <section className="pt-14 w-full">
       <div className="w-full grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 justify-items-center md:gap-x-20 gap-[20px] md:gap-[40px]">
@@ -95,7 +103,7 @@ function Home() {
             index={index}
             score={scores[index]}
             onScoreChange={handleScoreChange}
-            percentage={(scores[index] * 100) / 75}
+            percentage={getPercentage(scores[index], index)}
             color={getBackgroundColor(index, scores[index])}
           />
         ))}
@@ -186,7 +194,7 @@ function Home() {
                   ))}
                 </div>
                 {/* show grad and scores */}
-                <div className="z-40 text-red-500 text-3xl absolute left-0 bottom-0 flex gap-4 m-[15px] md:m-[50px]">
+                <div className="z-40 m-[10px] md:m-[15px] xl:m-[45px] text-red-500 text-3xl absolute left-0 bottom-0 flex gap-4">
                   <div className="grid grid-cols-2 gap-y-1 md:gap-y-4">
                     <p className="font-khmer text-[1.23rem] md:text-md font-semibold text-accent">
                       ពិន្ទុ:

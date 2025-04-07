@@ -11,6 +11,6 @@
     @apply md:px-10 px-2;
   }
   section {
-    @apply md:px-10 px-4 h-[100vh];
+    @apply md:px-10 px-4 h-auto;
   }
 }
