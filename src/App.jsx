@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home2 from "./components/Home2";
 import Footer from "./components/Footer";
+import AdsComponent from "./AdsComponent";
 function App() {
   return (
     <BrowserRouter>
@@ -12,10 +13,10 @@ function App() {
         <Route path="/" index element={<Home />} />
         <Route path="/home2" element={<Home2 />} />
       </Routes>
-      <amp-auto-ads
-        type="adsense"
-        data-ad-client="ca-pub-4371688092415863"
-      ></amp-auto-ads>
+      <div>
+        <h1>Place To show Google AdSense</h1>
+        <AdsComponent dataAdSlot="X7XXXXXX5X" />
+      </div>
       <Footer />
     </BrowserRouter>
   );
