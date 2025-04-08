@@ -12,6 +12,10 @@ function App() {
         <Route path="/" index element={<Home />} />
         <Route path="/home2" element={<Home2 />} />
       </Routes>
+      <amp-auto-ads
+        type="adsense"
+        data-ad-client="ca-pub-4371688092415863"
+      ></amp-auto-ads>
       <Footer />
     </BrowserRouter>
   );
