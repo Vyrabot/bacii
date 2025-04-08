@@ -14,7 +14,6 @@ function App() {
         <Route path="/home2" element={<Home2 />} />
       </Routes>
       <div>
-        <h1>Place To show Google AdSense</h1>
         <AdsComponent dataAdSlot="X7XXXXXX5X" />
       </div>
       <Footer />
