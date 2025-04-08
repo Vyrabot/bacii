@@ -15,8 +15,8 @@ function Home() {
     { title: "សីសធម៏​ ពលរដ្ធ", img: p3 },
     { title: "ប្រវត្ដវិទ្យា", img: p6 },
     { title: "ភូមវិទ្យា", img: p5 },
-    { title: "ផែនដីវិជ្ចា", img: p2 },
-    { title: "អង់អង្គេស", img: p1 },
+    { title: "ផែនដីវិទ្យា", img: p2 },
+    { title: "ភាសាបរទេស", img: p1 },
   ];
   const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0]);
   const [adjustedScores, setAdjustedScores] = useState([0, 0, 0, 0, 0, 0, 0]);

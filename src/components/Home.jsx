@@ -15,7 +15,7 @@ function Home() {
     { title: "រូបវិទ្យា", img: p5 },
     { title: "ជីវះវិទ្យា", img: p6 },
     { title: "ប្រវត្ដវិទ្យា", img: p2 },
-    { title: "អង់អង្គេស", img: p1 },
+    { title: "ភាសាបរទេស", img: p1 },
   ];
   const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0]);
   const [adjustedScores, setAdjustedScores] = useState([0, 0, 0, 0, 0, 0, 0]);
