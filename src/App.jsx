@@ -13,9 +13,6 @@ function App() {
         <Route path="/" index element={<Home />} />
         <Route path="/home2" element={<Home2 />} />
       </Routes>
-      <div>
-        <AdsComponent dataAdSlot="X7XXXXXX5X" />
-      </div>
       <Footer />
     </BrowserRouter>
   );
