@@ -1,20 +1,29 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Home2 from "./components/Home2";
-import Footer from "./components/Footer";
-import AdsComponent from "./AdsComponent";
+import { ThemeProvider } from "./context/ThemeContext";
+import { LanguageProvider } from "./context/LanguageContext";
+import { ScoreProvider } from "./context/ScoreContext";
+import MainNavigation from "./components/MainNavigation";
+import ScienceGradeCalculator from "./components/ScienceGradeCalculator";
+import SocialGradeCalculator from "./components/SocialGradeCalculator";
+import AppFooter from "./components/AppFooter";
+
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" index element={<Home />} />
-        <Route path="/home2" element={<Home2 />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <ThemeProvider>
+      <LanguageProvider>
+        <ScoreProvider>
+          <BrowserRouter>
+            <MainNavigation />
+            <Routes>
+              <Route path="/" index element={<ScienceGradeCalculator />} />
+              <Route path="/home2" element={<SocialGradeCalculator />} />
+            </Routes>
+            <AppFooter />
+          </BrowserRouter>
+        </ScoreProvider>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 

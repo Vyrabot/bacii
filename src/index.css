@@ -1,16 +1,89 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Koh+Santepheap:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kantumruy+Pro:ital,wght@100..900&family=Outfit:wght@100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   body,
   html {
-    @apply font-khmer bg-bg w-full h-[100vh];
+    @apply bg-bg w-full min-h-screen text-slate-900 transition-colors duration-200;
+    background-image: radial-gradient(circle at top, rgba(96, 150, 186, 0.25), transparent 45%),
+      radial-gradient(circle at 30% 20%, rgba(39, 76, 119, 0.08), transparent 40%);
   }
+
+  html.lang-km body {
+    @apply font-khmer;
+  }
+
+  html.lang-en body {
+    @apply font-english;
+  }
+
+  /* Dark mode styles */
+  html.dark {
+    @apply bg-dark-primary text-white;
+    color-scheme: dark;
+  }
+
+  html.dark body {
+    @apply bg-dark-primary;
+    background-image: radial-gradient(circle at top, rgba(233, 69, 96, 0.2), transparent 50%),
+      radial-gradient(circle at 30% 20%, rgba(15, 52, 96, 0.3), transparent 45%);
+  }
+
   header {
-    @apply md:px-10 px-2;
+    @apply transition-colors duration-200;
   }
-  section {
-    @apply md:px-10 px-4 h-auto;
+}
+
+/* Custom animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
   }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animation */
+.loading {
+  @apply animate-pulse opacity-60;
+}
+
+/* Dark mode color overrides */
+html.dark header {
+  @apply bg-dark-secondary;
+}
+
+html.dark .bg-Primery {
+  @apply bg-dark-secondary;
+}
+
+html.dark .bg-bg {
+  @apply bg-dark-primary;
+}
+
+html.dark .bg-bg2 {
+  @apply bg-dark-accent/50;
+}
+
+html.dark .text-accent {
+  @apply text-blue-300;
 }
