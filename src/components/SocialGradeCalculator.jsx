@@ -159,8 +159,8 @@ function SocialGradeCalculator() {
           
           {/* Month & Summary Card */}
           <div className={`overflow-hidden rounded-3xl border shadow-lg backdrop-blur-md transition-all ${isDark ? "bg-dark-secondary/80 border-white/10" : "bg-white/80 border-white/50"}`}>
-            <div className="p-4 sm:p-6 md:p-8">
-              <div className="flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center">
+            <div className="p-2 sm:p-4 md:p-8">
+              <div className="flex flex-col-reverse justify-between gap-4 md:gap-6 md:flex-row md:items-center">
                 <div className="flex items-center justify-between w-full md:w-auto">
                   <div>
                     <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-blue-200/60">
@@ -186,7 +186,7 @@ function SocialGradeCalculator() {
                   </button>
                 </div>
 
-                <div className="flex items-center gap-3 rounded-2xl bg-slate-100/50 p-1.5 dark:bg-white/5 sm:p-2">
+                <div className="flex justify-between items-center gap-3 rounded-2xl ring-1 bg-slate-200/50 p-1 md:p-1.5 dark:bg-white/5 sm:p-2">
                   <div className="px-3">
                     <label className="block text-[8px] sm:text-[10px] font-bold uppercase text-slate-400 dark:text-blue-200/60">
                       {t("month")}
