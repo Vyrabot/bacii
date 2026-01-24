@@ -15,14 +15,14 @@ function MainNavigation() {
     <header className={`sticky top-0 z-50 w-full border-b backdrop-blur-xl transition-colors duration-300 ${
       isDark ? "border-white/10 bg-dark-secondary/80" : "border-white/20 bg-white/70"
     }`}>
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-4 md:px-6 lg:px-8">
         <div className="flex flex-col min-w-0">
-          <h1 className="bg-gradient-to-r from-accent to-blue-500 bg-clip-text text-3xl font-black tracking-tight text-transparent dark:from-blue-200 dark:to-indigo-300 sm:text-2xl md:text-3xl truncate">
+          <h1 className="bg-gradient-to-r from-accent to-blue-500 bg-clip-text text-3xl font-black tracking-tight text-transparent dark:from-blue-200 dark:to-indigo-300 sm:text-[1.4rem] md:text-3xl truncate">
             {t("appTitle")}
           </h1>
         </div>
 
-        <div className="flex items-center gap-3 md:gap-6">
+        <div className="flex items-center gap-1 md:gap-3 lg:gap-6">
           <div className={`flex items-center rounded-full p-1 ${isDark ? "bg-white/5" : "bg-slate-100/50"}`}>
             <Link
               to="/"
@@ -46,7 +46,7 @@ function MainNavigation() {
             </Link>
           </div>
 
-          <div className={`flex items-center gap-2 border-l pl-3 md:gap-3 md:pl-6 ${isDark ? "border-white/10" : "border-slate-200"}`}>
+          <div className={`flex items-center gap-1 border-l pl-1 md:pl-3 md:gap-3 lg:pl-6 ${isDark ? "border-white/10" : "border-slate-200"}`}>
             <button
               onClick={toggleTheme}
               className={`group relative flex h-9 w-9 items-center justify-center rounded-full transition-all ${
