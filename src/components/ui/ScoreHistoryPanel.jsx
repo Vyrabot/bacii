@@ -146,11 +146,14 @@ function ScoreHistoryPanel({ entries, track, language, t, onRemove, onClear, isD
                                             </div>
                                         );
                                     })}
+                                    
                                 </div>
                             </div>
                         ))}
+                        
                     </div>
                 )}
+                
             </div>
         </div>
     );
